@@ -5,12 +5,16 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@EnableWebMvc
 @Configuration
 @Import(value = {
-		PersistenceConfig.class
+		WebConfig.class,
+		PersistenceConfig.class,
+		SecurityConfig.class,
 		})
+@ComponentScan(basePackages = "ndvi.agro.config")
 public class AgroNdviConfig {
 	
 

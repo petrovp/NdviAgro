@@ -6,12 +6,12 @@ public class NdviAgroInitializer extends AbstractAnnotationConfigDispatcherServl
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[]{AgroNdviConfig.class/*, SecurityConfig.class */};
+		return new Class<?>[]{AgroNdviConfig.class  };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[] {WebConfig.class  };
+		return null;
 	}
 
 	@Override
