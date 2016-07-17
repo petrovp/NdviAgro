@@ -44,7 +44,8 @@ public class PersistenceConfig {
 		Properties jpaProperties = new Properties();
 
 		jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-		jpaProperties.put("hibernate.hbm2ddl.auto", "create");
+		jpaProperties.put("hibernate.hbm2ddl.auto", "update");
+		jpaProperties.put("ibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy");
 		jpaProperties.put("hibernate.show_sql", "true");
 		jpaProperties.put("hibernate.format_sql", "true");
 

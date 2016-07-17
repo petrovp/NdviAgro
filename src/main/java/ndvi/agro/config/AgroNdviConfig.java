@@ -14,7 +14,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 		PersistenceConfig.class,
 		SecurityConfig.class,
 		})
-@ComponentScan(basePackages = "ndvi.agro.config")
+@ComponentScan(basePackages =  { 
+		"ndvi.agro.config",
+		"ndvi.agro.service" 
+		})
 public class AgroNdviConfig {
 	
 

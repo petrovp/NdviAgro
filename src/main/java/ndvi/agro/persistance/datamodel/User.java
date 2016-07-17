@@ -2,27 +2,31 @@ package ndvi.agro.persistance.datamodel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Entity
-@Table(name = "USER")
-public class User {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+@Entity(name = "user")
+public class User extends BaseEntity {
 
 	@NotNull
-	@Column(name = "username", nullable = false, unique = true, length = 100)
+	@Column(nullable = false, unique = true, length = 100)
 	private String username;
 
 	@NotNull
-	@Column(name = "hashed_password", nullable = false, length = 100)
-	private String hashedPassword;
+	@Column(nullable = false, length = 100)
+	private String password;
+	
+	@ManyToOne(targetEntity = Authority.class, fetch = FetchType.EAGER, optional = true)
+    @JoinColumn(name = "authority_id", nullable = true)
+    private Authority authority;
+
 
 	public String getUsername() {
 		return username;
@@ -32,12 +36,20 @@ public class User {
 		this.username = username;
 	}
 
-	public String getHashedPassword() {
-		return hashedPassword;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setHashedPassword(String hashedPassword) {
-		this.hashedPassword = hashedPassword;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Authority getAuthority() {
+		return authority;
+	}
+
+	public void setAuthority(Authority authority) {
+		this.authority = authority;
 	}
 
 }

@@ -10,17 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import lombok.Getter;
+import lombok.Setter;
 
-@Entity
-@Table(name = "USER")
-public class Photo {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+@Entity(name = "photo")
+public class Photo extends BaseEntity{
 
 	@NotNull
-	@Column(name = "type", nullable = false, length = 100)
+	@Column(nullable = false, length = 100)
 	private String type;
 
 	@NotNull
@@ -28,63 +26,12 @@ public class Photo {
 	private Date creationDate;
 
 	@NotNull
-	@Column(name = "content")
 	private byte[] content;
 
 	@NotNull
-	@Column(name = "latitude")
 	private double latitude;
 
 	@NotNull
-	@Column(name = "longitude")
 	private double longitude;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public Date getCreationDate() {
-		return creationDate;
-	}
-
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
-	}
-
-	public byte[] getContent() {
-		return content;
-	}
-
-	public void setContent(byte[] content) {
-		this.content = content;
-	}
-
-	public double getLatitude() {
-		return latitude;
-	}
-
-	public void setLatitude(double latitude) {
-		this.latitude = latitude;
-	}
-
-	public double getLongitude() {
-		return longitude;
-	}
-
-	public void setLongitude(double longitude) {
-		this.longitude = longitude;
-	}
 
 }
