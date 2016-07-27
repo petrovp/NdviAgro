@@ -48,6 +48,10 @@ public class PersistenceConfig {
 		jpaProperties.put("ibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy");
 		jpaProperties.put("hibernate.show_sql", "true");
 		jpaProperties.put("hibernate.format_sql", "true");
+		jpaProperties.put("jadira.usertype.autoRegisterUserTypes", true);
+		jpaProperties.put("jadira.usertype.databaseZone", "jvm");
+		jpaProperties.put("jadira.usertype.javaZone", "jvm");
+		
 
 		entityManagerFactoryBean.setJpaProperties(jpaProperties);
 

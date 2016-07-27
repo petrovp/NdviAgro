@@ -1,8 +1,12 @@
+ndvi\agro\service\impl\UserServiceImpl.class
 ndvi\agro\config\PersistenceConfig.class
 ndvi\agro\config\AgroNdviConfig.class
+ndvi\agro\service\impl\PhotosServiceImpl.class
 ndvi\agro\persistance\repostories\UserRepository.class
+ndvi\agro\utility\Utility.class
 ndvi\agro\persistance\datamodel\BaseEntity.class
 ndvi\agro\persistance\datamodel\Photo.class
+ndvi\agro\service\PhotosService.class
 ndvi\agro\web\controllers\LoginController.class
 ndvi\agro\config\SecurityConfig.class
 ndvi\agro\persistance\datamodel\Authority.class
@@ -10,8 +14,11 @@ ndvi\agro\persistance\datamodel\User.class
 ndvi\agro\config\NdviAgroInitializer.class
 ndvi\agro\config\SecurityWebApplicationInitializer.class
 ndvi\agro\opencv\OpenCvExample.class
+ndvi\agro\persistance\repostories\PhotoRepository.class
 ndvi\agro\service\impl\UserDetailsServiceImpl.class
 ndvi\agro\web\controllers\UploadPhotosController.class
 ndvi\agro\config\WebConfig.class
+ndvi\agro\service\exceptions\InvalidFileException.class
+ndvi\agro\config\constants\AuthoritiesConstants.class
 ndvi\agro\service\UserService.class
 ndvi\agro\web\controllers\HelloWorldController.class

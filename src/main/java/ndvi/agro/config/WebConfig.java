@@ -21,10 +21,10 @@ public class WebConfig {
 		return internalResourceViewResolver;
 	}
 	
-//	@Bean
-//	CommonsMultipartResolver multipartResolver (){
-//		CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
-//		
-//		return commonsMultipartResolver;
-//	}
+	@Bean
+    public CommonsMultipartResolver multipartResolver() {
+        CommonsMultipartResolver resolver=new CommonsMultipartResolver();
+        resolver.setDefaultEncoding("utf-8");
+        return resolver;
+    }
 }
